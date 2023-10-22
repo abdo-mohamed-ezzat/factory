@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center"> Add Order </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content class="ion-padding">
+  <div class="info-container">
+    <ion-item lines="none">
+      <ion-input placeholder="Name" class="custom-input"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-input type="date" placeholder="Exp Date" class="custom-input"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-input placeholder="Field" class="custom-input"></ion-input>
+    </ion-item>
+  </div>
+</ion-content> -->
+
+<ion-card class="card-content">
+  <ion-card-header style="align-self: flex-start;">
+    <ion-card-title>Order Information</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item lines="none">
+      <ion-input placeholder="Name" class="custom-input"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-input type="date" placeholder="Exp Date" class="custom-input"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-input placeholder="Field" class="custom-input"></ion-input>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+
+<ion-footer class="custom-footer">
+  <ion-grid>
+    <ion-row style="justify-content: center;">
+      <ion-col size="5">
+        <ion-button expand="full" color="primary" class="custom-button" fill="solid" (click)="onOrderDetails()">Next</ion-button>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+</ion-footer>

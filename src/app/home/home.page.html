@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Home </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="card-container">
+    <ion-grid [fixed]="true">
+      <ion-row class="center-content">
+        <!-- Total Orders Card -->
+        <ion-col size="9">
+          <ion-card class="primary-card">
+            <ion-card-header>
+              <ion-card-title>Total Orders</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{ totalOrders | currency: 'EGP' }}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <!-- Add Button -->
+        <ion-col size="3" class="ion-padding">
+          <ion-button color="success" class="add-button" (click)="onAddOrder()">
+            <ion-icon name="add-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <!-- Table section -->
+      <ion-row>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col" colspan="3">name</th>
+              <th scope="col">price</th>
+              <th scope="col" >Quan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of orders">
+              <th scope="row">{{ order.id }}</th>
+              <td colspan="3">{{ order.name }}</td>
+              <td>{{ order.price | currency: 'EGP' }}</td>
+              <td>{{ order.quantity }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+                  >Previous</a
+                >
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
